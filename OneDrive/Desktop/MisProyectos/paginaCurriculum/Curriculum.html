@@ -16,7 +16,7 @@
     }
 
     body {
-        width: 60%;
+        width: 70%;
         height: 100%;
         margin: 0 auto;
         background-color: rgb(237, 234, 234);
@@ -214,8 +214,8 @@
         justify-content: space-between;
     }
 
-    /*Moviles menos de 880px*/
-    @media (max-width: 880px) {
+    /*Moviles menos de 700px*/
+    @media (max-width: 700px) {
         body {
             /*Ocupará todo el anco de la pantalla*/
             width: 100%;
@@ -230,7 +230,7 @@
             order: 2;
             width: 100%;
             /*Ocupará todo el anco de la pantalla*/
-            
+            margin-top: 0px;
         }
 
         .contenedorPerfil {
@@ -241,8 +241,8 @@
 
         .careerProfile,
         .experinces {
-            margin: 5px 20px 30px 20px;
-            /*Se reduciran las margenes*/
+            margin: 35px 35px 0px 35px;
+            padding: 0px;
         }
 
         .perfil {
@@ -251,7 +251,7 @@
         }
 
         .perfil img {
-            width: 80px;
+            width: 100px;
             /*Reducimos el tamaño de la imagen del perfil*/
         }
 
@@ -272,7 +272,14 @@
 
         .contactoson {
             padding: 10px 0px 0px 0px;
-            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 15px;
+            width: 100%;
+            padding: 10px 20px 5px 15px;
+            box-sizing: border-box;
         }
 
         .contactar {
@@ -280,10 +287,50 @@
         }
 
         .contactar h5 {
-            font-size: 12px;
+            font-size: 13px;
             /*Reducimos el tamaño de la letra*/
         }
 
+    }
+
+    @media (min-width: 701px) and (max-width: 880px) {
+        body{
+            width: 80%;
+        }
+        .contenedorPrincipal {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .contenedorInfo {
+            width: 100%;
+            order: 2;
+            margin-top: 0px;
+        }
+
+        .contenedorPerfil {
+            width: 100%;
+
+        }
+
+        .perfil {
+            height: 100%;
+            width: 35%;
+        }
+
+        .contacto {
+            height: 100%;
+            width: 65%;
+        }
+
+        .contactoson {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            font-size: 15px;
+            padding: 15px 0px 5px 0px;
+            width: 90%;
+        }
     }
 
     @media (min-width: 881px) and (max-width: 1161px) {
